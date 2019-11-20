@@ -4,7 +4,7 @@ pipeline {
     stages {
         stage('publish Project') {
             steps {
-                bat label: '', script: 'dotnet publish .\\dotnet-example.csproj -c Release'
+                bat label: '', script: 'dotnet publish DockerDemo -c Release -o out'
             }
         }
         stage('Octopus Create release') {
