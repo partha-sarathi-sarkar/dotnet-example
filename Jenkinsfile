@@ -9,7 +9,7 @@ pipeline {
         }
         stage('Octopus Create release') {
             steps {
-                bat label: '', script: 'Octo.exe pack --id DockerAppDemo --version %BUILD_NUMBER%.0.0'
+                bat label: '', script: 'Octo.exe pack --id DockerWebAppDemo --version %BUILD_NUMBER%.0.0'
             }
         }
         stage('octo push package') {
